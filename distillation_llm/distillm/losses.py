@@ -76,9 +76,7 @@ def ab_div(logits, teacher_logits, no_model_batch, alpha, beta):
         second_term = torch.masked_fill(second_term, inf_mask, 0)
         third_term = torch.masked_fill(third_term, inf_mask, 0)
 
-        # Note that we divide by (a + b) instead of (ab) here, we found that this approach results in more stable training.
-        divergence = -torch.sum(first_term - second_term - third_term, dim=-1) / (alpha + beta)
-        # divergence = -torch.sum(first_term - second_term - third_term, dim=-1) / (alpha * beta)
+        divergence = -torch.sum(first_term - second_term - third_term, dim=-1) / (alpha * beta)
 
     mask = (no_model_batch["label"] != -100).int()  # Shape: (B, S)
 
