@@ -273,8 +273,7 @@ def skewed_forward_kl(logits, teacher_logits, no_model_batch, lam=0.1):
     prod_probs = torch.masked_fill(teacher_probs * mixed_logprobs, inf_mask, 0)
     x = torch.sum(prod_probs, dim=-1).view(-1)
     distil_loss = -torch.sum(x * mask.view(-1), dim=0) / torch.sum(mask.view(-1), dim=0)
-    r_loss = skewed_reverse_kl(logits, teacher_logits, no_model_batch, lam=0.1)
-    return 0.5 * distil_loss + 0.5 * r_loss
+    return distil_loss
 
 
 def skewed_reverse_kl(logits, teacher_logits, no_model_batch, lam=0.1):
