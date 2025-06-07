@@ -241,7 +241,7 @@ def js_distance(logits, teacher_logits, no_model_batch, lam=0.1):
     return distil_loss
 
 
-def wsd(logits, teacher_logits, no_model_batch):
+def wsd(logits, teacher_logits, no_model_batch, lam=0.5):
     for_kl = forward_kl(logits, teacher_logits, no_model_batch)
     rev_kl = reverse_kl(logits, teacher_logits, no_model_batch)
     distil_loss = (1 - lam) * for_kl + lam * rev_kl
