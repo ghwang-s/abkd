@@ -209,11 +209,6 @@ def AKL(teacher_logits, logits, no_model_batch):
     return distil_loss
 
 
-def symmetric_kl(logits, teacher_logits, no_model_batch, lam=0.1):
-    for_kl = forward_kl(logits, teacher_logits, no_model_batch)
-    rev_kl = reverse_kl(logits, teacher_logits, no_model_batch)
-    distil_loss = (1 - lam) * for_kl + lam * rev_kl
-    return distil_loss
 
 
 def js_distance(logits, teacher_logits, no_model_batch, lam=0.1):
