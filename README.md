@@ -3,7 +3,7 @@
 <!-- <a href="https://arxiv.org/abs/2402.03898"><img src="https://img.shields.io/badge/Paper-arXiv:2402.03898-Green"></a>
 <a href=#bibtex><img src="https://img.shields.io/badge/Paper-BibTex-yellow"></a> -->
 
-This repository is the official PyTorch implementation of ABKD (💫ICML 2025 Spotlight💫 **2.6%**). The paper is available [here](https://arxiv.org/abs/2505.04560).
+This repository is the official PyTorch implementation of ABKD (💫ICML 2025 Oral💫 **1.0%**). The paper is available [here](https://arxiv.org/abs/2505.04560).
 
 **Paper Title: ABKD: Pursuing a Proper Allocation of the Probability Mass in Knowledge Distillation via α-β-Divergence**
 
