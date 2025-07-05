@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/9e2d843c-4d77-4357-8691-713872906d23" alt="ABKD">
+  <img src="https://github.com/user-attachments/assets/9e2d843c-4d77-4357-8691-713872906d23" alt="ABKD", width="300px">
   <h1>ABKD: Pursuing a Proper Allocation of the Probability Mass in Knowledge Distillation via α-β-Divergence</h1>
 </div>
 
